@@ -1,3 +1,5 @@
+# README
+
 🤖 Sentinela Industrial: Manutenção Preditiva com IA
 Este projeto é uma aplicação web completa que utiliza um modelo de Machine Learning para prever falhas em equipamentos industriais em tempo real, com base em dados de sensores. A solução transforma dados brutos em um diagnóstico acionável, permitindo uma manutenção mais inteligente e proativa.
 
@@ -5,7 +7,8 @@ Este projeto é uma aplicação web completa que utiliza um modelo de Machine Le
 ![Image](https://github.com/user-attachments/assets/915774f6-c907-4439-ac6a-4c830d728693)
 
 
-✨ Funcionalidades Principais
+# Funcionalidades Principais ✨
+
 Modelo Preditivo de Alta Performance: Utiliza um modelo RandomForestClassifier treinado para identificar padrões que antecedem falhas, alcançando uma acurácia superior a 99% no dataset de teste.
 Análise em Tempo Real: Uma interface interativa construída com Streamlit permite que o usuário insira os dados dos sensores e receba um diagnóstico instantâneo sobre a condição da máquina.
 Diagnóstico Claro: A aplicação fornece um status visual e claro (Operação Normal ou ALERTA: Falha iminente detectada!) e a probabilidade percentual de falha.
