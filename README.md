@@ -2,6 +2,7 @@
 Este projeto é uma aplicação web completa que utiliza um modelo de Machine Learning para prever falhas em equipamentos industriais em tempo real, com base em dados de sensores. A solução transforma dados brutos em um diagnóstico acionável, permitindo uma manutenção mais inteligente e proativa.
 
 # Execução
+![Image](https://github.com/user-attachments/assets/915774f6-c907-4439-ac6a-4c830d728693)
 
 
 ✨ Funcionalidades Principais
