@@ -1,62 +1,106 @@
-# README
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=SENTINELA%20INDUSTRIAL&fontSize=60&fontAlignY=35&desc=Ind%C3%BAstria%204.0%20|%20Manuten%C3%A7%C3%A3o%20Preditiva%20com%20IA&descAlignY=55&descSize=18&fontColor=ffffff&customColorList=06b6d4,000205&animation=fadeIn" width="100%"/>
+</div>
 
-🤖 Sentinela Industrial: Manutenção Preditiva com IA
-Este projeto é uma aplicação web completa que utiliza um modelo de Machine Learning para prever falhas em equipamentos industriais em tempo real, com base em dados de sensores. A solução transforma dados brutos em um diagnóstico acionável, permitindo uma manutenção mais inteligente e proativa.
+<div align="center">
+  <br />
+  
+  <a href="https://github.com/RomarioDelphin">
+    <img src="https://img.shields.io/badge/DEV-ROMARIO%20DELPHIN-000205?style=for-the-badge&logo=github&logoColor=06b6d4&labelColor=000205&color=06b6d4" />
+  </a>
+  <img src="https://img.shields.io/badge/ML-SCIKIT%20LEARN-000205?style=for-the-badge&logo=scikitlearn&logoColor=F7931E&labelColor=000205&color=F7931E" />
+  <img src="https://img.shields.io/badge/APP-STREAMLIT-000205?style=for-the-badge&logo=streamlit&logoColor=FF4B4B&labelColor=000205&color=FF4B4B" />
 
-# Execução
-![Image](https://github.com/user-attachments/assets/915774f6-c907-4439-ac6a-4c830d728693)
+</div>
 
+<br />
 
-# Funcionalidades Principais ✨
+## ⚡ Sobre o Projeto
 
-Modelo Preditivo de Alta Performance: Utiliza um modelo RandomForestClassifier treinado para identificar padrões que antecedem falhas, alcançando uma acurácia superior a 99% no dataset de teste.
-Análise em Tempo Real: Uma interface interativa construída com Streamlit permite que o usuário insira os dados dos sensores e receba um diagnóstico instantâneo sobre a condição da máquina.
-Diagnóstico Claro: A aplicação fornece um status visual e claro (Operação Normal ou ALERTA: Falha iminente detectada!) e a probabilidade percentual de falha.
-Engenharia de Features: O projeto inclui um pipeline de pré-processamento robusto que normaliza os dados de entrada (StandardScaler) para garantir a máxima performance do modelo.
-🛠️ Tecnologias e Bibliotecas Utilizadas
-Linguagem: Python 3
-Análise e Modelagem: Pandas, Scikit-learn
-Aplicação Web: Streamlit
-Manipulação de Arquivos: Joblib
-Visualização de Dados: Matplotlib, Seaborn
-Ambiente: Jupyter Notebook (para exploração e treinamento)
-🚀 Como Rodar o Projeto Localmente
-Siga os passos abaixo para executar a aplicação no seu ambiente.
+O **Sentinela Industrial** é uma aplicação de **Inteligência Artificial** voltada para a Indústria 4.0, desenhada para prever falhas em maquinário pesado antes que elas ocorram (Manutenção Preditiva).
 
-Pré-requisitos
-Python 3.10 ou superior
-Git
-Instalação
-Clone este repositório:
+Utilizando um modelo treinado de **Machine Learning**, o sistema analisa dados brutos de sensores (temperatura, vibração, rotação) e fornece um diagnóstico em tempo real, permitindo que gestores de fábrica evitem paradas não planejadas (Downtime) e otimizem custos operacionais.
 
-Bash
+### 🎯 Funcionalidades Core
+* **🧠 Modelo Preditivo de Alta Precisão:** Utiliza o algoritmo **RandomForestClassifier**, alcançando acurácia superior a **99%** na detecção de padrões de falha.
+* **📊 Dashboard em Tempo Real:** Interface construída com **Streamlit**, permitindo input dinâmico de parâmetros operacionais.
+* **🚨 Sistema de Alerta Visual:** Classificação binária instantânea:
+    * 🟢 **Operação Normal:** Equipamento seguro.
+    * 🔴 **ALERTA DE FALHA:** Risco iminente detectado com probabilidade percentual.
+* **⚙️ Engenharia de Recursos:** Pipeline robusto com `StandardScaler` para normalização de dados sensoriais.
 
-git clone https://github.com/SEU-USUARIO/Sentinela_Industrial.git
-Navegue até a pasta do projeto:
+---
 
-Bash
+## 🛠️ Stack Tecnológica
 
+O projeto combina Ciência de Dados robusta com uma interface web ágil.
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=python,sklearn,pandas,vscode&perline=10" />
+</div>
+
+| Camada | Tecnologia | Função |
+| :--- | :--- | :--- |
+| **Linguagem** | `Python 3.10+` | Core do processamento de dados. |
+| **Modelagem** | `Scikit-learn` | Treinamento do modelo RandomForest e métricas. |
+| **Frontend** | `Streamlit` | Interface web interativa para operadores. |
+| **Dados** | `Pandas / Joblib` | Manipulação de datasets e persistência do modelo (`.pkl`). |
+
+---
+
+## 🚀 Como Rodar o Projeto
+
+Siga os passos abaixo para executar a aplicação de monitoramento em seu ambiente local.
+
+### 📋 Pré-requisitos
+* Python 3.10 ou superior.
+* Git instalado.
+
+### 1. Instalação e Configuração
+
+```bash
+# Clone o repositório
+git clone [https://github.com/RomarioDelphin/Sentinela_Industrial.git](https://github.com/RomarioDelphin/Sentinela_Industrial.git)
+
+# Entre na pasta
 cd Sentinela_Industrial
-Crie e ative um ambiente virtual:
 
-Bash
-
-# Criar
+# Crie um ambiente virtual
 python -m venv venv
 
-# Ativar no Windows
+# Ative o ambiente:
+# Windows:
 .\venv\Scripts\activate
-Instale as dependências necessárias:
+# Linux/Mac:
+# source venv/bin/activate
 
-Bash
+# Instale as dependências
+pip install -r requisitos.txt
 
-pip install -r requirements.txt
-Execução
-Com o ambiente virtual ativo, inicie a aplicação Streamlit:
+```
 
-Bash
+### 2. Execução (Dashboard)
 
+Com o ambiente ativo, inicie a interface do Streamlit:
+
+```bash
 streamlit run app.py
-A aplicação abrirá automaticamente no seu navegador padrão.
 
-Este projeto é uma demonstração prática de como a Inteligência Artificial pode ser aplicada para resolver desafios reais na indústria, otimizando processos e prevenindo perdas.
+```
+
+*O navegador abrirá automaticamente exibindo o Painel de Controle do Sentinela.*
+
+---
+
+## 📂 Estrutura de Arquivos
+
+* `app.py`: Código principal da interface e lógica de inferência.
+* `modelo_manutencao_preditiva.pkl`: O "cérebro" da IA (modelo treinado).
+* `scaler_manutencao_preditiva.pkl`: Normalizador de dados (garante a precisão matemática).
+* `requisitos.txt`: Lista de bibliotecas necessárias.
+
+---
+
+<div align="center">
+<p>Desenvolvido por <strong>Romário Delphin</strong> como parte do portfólio <strong>RAM.IO Holdings</strong>.</p>
+</div>
