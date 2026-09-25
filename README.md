@@ -17,17 +17,17 @@
 
 ## ⚡ Sobre o Projeto
 
-O **Sentinela Industrial** é uma aplicação de **Inteligência Artificial** voltada para a Indústria 4.0, desenhada para prever falhas em maquinário pesado antes que elas ocorram (Manutenção Preditiva).
+O **Sentinela Industrial** é uma demonstração em Streamlit de classificação de falhas com dados de sensores. O repositório inclui um conjunto de dados, um modelo serializado e a interface de inferência.
 
-Utilizando um modelo treinado de **Machine Learning**, o sistema analisa dados brutos de sensores (temperatura, vibração, rotação) e fornece um diagnóstico em tempo real, permitindo que gestores de fábrica evitem paradas não planejadas (Downtime) e otimizem custos operacionais.
+O usuário ajusta temperatura, rotação, torque e desgaste da ferramenta na interface para consultar o modelo. O repositório não documenta instalação em equipamentos reais, coleta contínua de sensores nem redução de paradas ou custos.
 
 ### 🎯 Funcionalidades Core
-* **🧠 Modelo Preditivo de Alta Precisão:** Utiliza o algoritmo **RandomForestClassifier**, alcançando acurácia superior a **99%** na detecção de padrões de falha.
-* **📊 Dashboard em Tempo Real:** Interface construída com **Streamlit**, permitindo input dinâmico de parâmetros operacionais.
+* **🧠 Inferência com modelo serializado:** Classificação e probabilidade exibidas a partir de arquivos `.pkl`. O código de treinamento, a divisão dos dados e o relatório de avaliação não estão neste repositório; a acurácia não pode ser verificada aqui.
+* **📊 Dashboard interativo:** Interface construída com **Streamlit**, com ajuste manual de parâmetros operacionais.
 * **🚨 Sistema de Alerta Visual:** Classificação binária instantânea:
     * 🟢 **Operação Normal:** Equipamento seguro.
     * 🔴 **ALERTA DE FALHA:** Risco iminente detectado com probabilidade percentual.
-* **⚙️ Engenharia de Recursos:** Pipeline robusto com `StandardScaler` para normalização de dados sensoriais.
+* **⚙️ Dados de entrada:** Cinco variáveis de sensores são enviadas ao modelo. Um arquivo de scaler é incluído, mas a aplicação não o carrega separadamente; o pré-processamento deve ser verificado antes de usar o resultado fora desta demonstração.
 
 ---
 
@@ -60,7 +60,7 @@ Siga os passos abaixo para executar a aplicação de monitoramento em seu ambien
 
 ```bash
 # Clone o repositório
-git clone [https://github.com/RomarioDelphin/Sentinela_Industrial.git](https://github.com/RomarioDelphin/Sentinela_Industrial.git)
+git clone https://github.com/RomarioDelphin/Sentinela_Industrial.git
 
 # Entre na pasta
 cd Sentinela_Industrial
@@ -75,7 +75,7 @@ python -m venv venv
 # source venv/bin/activate
 
 # Instale as dependências
-pip install -r requisitos.txt
+pip install -r requirements.txt
 
 ```
 
@@ -96,8 +96,12 @@ streamlit run app.py
 
 * `app.py`: Código principal da interface e lógica de inferência.
 * `modelo_manutencao_preditiva.pkl`: O "cérebro" da IA (modelo treinado).
-* `scaler_manutencao_preditiva.pkl`: Normalizador de dados (garante a precisão matemática).
-* `requisitos.txt`: Lista de bibliotecas necessárias.
+* `scaler_manutencao_preditiva.pkl`: Arquivo de normalização incluído; não é carregado diretamente pela interface.
+* `requirements.txt`: Lista de bibliotecas necessárias.
+
+## Limites da demonstração
+
+O modelo recebe valores inseridos manualmente e foi disponibilizado sem script de treinamento, validação temporal, matriz de confusão ou descrição de uso em ambiente industrial. A saída é uma demonstração técnica e não deve orientar decisões de manutenção sem avaliação independente com dados do equipamento e supervisão técnica.
 
 ---
 
